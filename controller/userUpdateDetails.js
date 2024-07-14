@@ -33,3 +33,10 @@ async function updateUserDetails(req,res){
 }
 
 module.exports=updateUserDetails
+
+// } catch (error) {
+//     return res.status(500).json({
+//         message:error.message||error,
+//         error:true
+//     })
+// }
