@@ -1,14 +1,11 @@
-const UserModel = require('../models/userModel');
+const UserModel = require('../models/UserModel');
 
 const bcryptjs = require ("bcryptjs")
 async function registerUser(req,res){
     try {
         const {name, email, password, profile_pic}= req.body
-        // console.log("api called sucessfullyyy")
-        // console.log(name, email, password, profile_pic);
         const checkEmail= await UserModel.findOne({email:email})
         if(checkEmail){
-          // console.log("User is already exist")
            return res.status(400).json({
             message:"User is already exist",
             error:true

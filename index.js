@@ -16,11 +16,11 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
  
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 5000
 
 app.get('/',(req,res)=>{
     res.json({
-        message:"server running at port ", PORT
+        message:"server running at port::-> ", PORT
     })
 })
 

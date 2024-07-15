@@ -1,5 +1,5 @@
 const jwt= require('jsonwebtoken')
-const UserModel = require('../models/userModel')
+const UserModel = require('../models/UserModel')
 
 const getUserDetailFormToken = async(token)=>{
     // console.log("tokenin user helpers file ----------->",token)
