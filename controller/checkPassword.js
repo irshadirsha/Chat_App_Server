@@ -6,8 +6,8 @@ async function checkPassword(req,res){
         try {
             console.log("reached");
         const {password, userId}=req.body
-        // console.log("email api called successfully email passowrd")
-        // console.log(password, userId)
+        console.log("email api called successfully email passowrd")
+        console.log(password, userId)
         const user= await UserModel.findById(userId)
         const verifypassword = await bcryptjs.compare(password,user.password)
         if(!verifypassword){
