@@ -26,7 +26,7 @@ async function checkPassword(req,res){
             // secure:true,
             httpOnly: true, 
             secure: process.env.NODE_ENV === 'production', 
-            sameSite: 'Strict', 
+            sameSite: 'None', 
         }
 
         return res.cookie('token',token,cookieOptions).status(200).json({
